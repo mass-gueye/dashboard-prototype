@@ -20,8 +20,10 @@ import { mainListItems, secondaryListItems } from "./ListItems";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import MList from "./MList";
+import Orders from "./Orders";
 import MList1 from "./MList1";
 import MList2 from "./MList2";
+import CircularProgressWithLabel from "./Circullar";
 
 function Copyright(props) {
   return (
@@ -170,7 +172,7 @@ function DashboardContent() {
             overflow: "auto",
           }}
         >
-          <Toolbar />
+          <Toolbar  />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Above */}
@@ -183,7 +185,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Chart />
+                  <Orders />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -219,7 +221,7 @@ function DashboardContent() {
                     p: 2,
                     display: "flex",
                     flexDirection: "column",
-                    height: 240,
+                    height: 270,
                   }}
                 >
                   <Chart />
@@ -230,12 +232,11 @@ function DashboardContent() {
                 <Paper
                   sx={{
                     p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
+
+                    height: 270,
                   }}
                 >
-                  <Deposits />
+                  <CircularProgressWithLabel />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={4}>

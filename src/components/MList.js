@@ -37,7 +37,7 @@ export default function MList() {
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
+              color="default"
               aria-label="menu"
               sx={{ mr: 2 }}
             >
