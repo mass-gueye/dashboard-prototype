@@ -21,6 +21,7 @@ import Chart from "./Chart";
 import Deposits from "./Deposits";
 import MList from "./MList";
 import Orders from "./Orders";
+import CardCustom from "./CardCustom";
 import MList1 from "./MList1";
 import MList2 from "./MList2";
 import CircularProgressWithLabel from "./Circullar";
@@ -210,7 +211,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Deposits />
+                  <CardCustom />
                 </Paper>
               </Grid>
               {/* End Above */}
