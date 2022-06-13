@@ -13,6 +13,7 @@ import Box from "@mui/material/Box";
 import { AiOutlineReload } from "react-icons/ai";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 export default function MList1() {
   
@@ -87,7 +88,8 @@ export default function MList1() {
                     }
                   />
                   <ListItemIcon>
-                    <DeleteIcon />
+                    <DeleteIcon edge="start" />
+                    <VisibilityIcon edge="end" style={{marginLeft: 5}} />
                   </ListItemIcon>
                 </ListItem>
               ))}
