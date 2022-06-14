@@ -16,7 +16,11 @@ import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { mainListItems, secondaryListItems } from "./ListItems";
+import {
+  mainListItems,
+  secondaryListItems,
+  avatarListItems,
+} from "./ListItems";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import MList from "./MList";
@@ -156,6 +160,8 @@ function DashboardContent() {
           </Toolbar>
           <Divider />
           <List component="nav">
+            {open && avatarListItems}
+            <Divider sx={{ my: 1 }} />
             {mainListItems}
             <Divider sx={{ my: 1 }} />
             {secondaryListItems}
@@ -173,7 +179,7 @@ function DashboardContent() {
             overflow: "auto",
           }}
         >
-          <Toolbar  />
+          <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Above */}

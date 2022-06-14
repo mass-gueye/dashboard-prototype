@@ -2,7 +2,6 @@ import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import ListSubheader from "@mui/material/ListSubheader";
 import Checkbox from "@mui/material/Checkbox";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -12,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import {FiEdit} from "react-icons/fi"
+import { FiEdit } from "react-icons/fi";
 
 export default function MList() {
   const [checked, setChecked] = React.useState([0]);
@@ -31,13 +30,12 @@ export default function MList() {
   };
   return (
     <React.Fragment>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
+      <Box>
+        <AppBar position="static" color="default">
+          <Toolbar disableGutters sx={{ paddingLeft: 1 }}>
             <IconButton
               size="large"
               edge="start"
-              color="default"
               aria-label="menu"
               sx={{ mr: 2 }}
             >
@@ -77,14 +75,9 @@ export default function MList() {
         {[0, 1, 2, 3, 4].map((sectionId) => (
           <li key={`section-${sectionId}`}>
             <ul>
-              <ListSubheader>{`I'm sticky ${sectionId}`}</ListSubheader>
               {[0, 1, 2].map((item) => (
-                <ListItem key={`item-${item}-${sectionId}`}>
-                  <ListItemButton
-                    role={undefined}
-                    onClick={handleToggle(item)}
-                    dense
-                  >
+                <ListItem key={`item-${item}-${sectionId}`} sx={{ height: 25 }}>
+                  <ListItemButton role={undefined} onClick={handleToggle(item)}>
                     <ListItemIcon>
                       <Checkbox
                         edge="start"

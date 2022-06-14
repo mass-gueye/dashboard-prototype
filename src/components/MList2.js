@@ -6,22 +6,22 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import AppBar from "@mui/material/AppBar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import {FiEdit} from "react-icons/fi"
+import { FiEdit } from "react-icons/fi";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import SearchBar from "./SearchList";
 
 export default function MList2() {
-  
   return (
     <React.Fragment>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
+      <Box sx={{ height: 50, marginBottom: 1 }}>
+        <AppBar position="static" color="default" sx={{ margin: 0 }}>
+          <Toolbar disableGutters sx={{ paddingLeft: 1 }}>
             <IconButton
               size="large"
               edge="start"
@@ -50,6 +50,7 @@ export default function MList2() {
           </Toolbar>
         </AppBar>
       </Box>
+      <SearchBar />
       <List
         sx={{
           width: "100%",
@@ -71,8 +72,7 @@ export default function MList2() {
                     <Avatar alt="Remy Sharp" src="." />
                   </ListItemAvatar>
                   <ListItemText
-                  style={{marginRight: "10px"}}
-                    primary="Brunch ?"
+                    style={{ marginRight: "10px" }}
                     secondary={
                       <React.Fragment>
                         <Typography
@@ -82,14 +82,14 @@ export default function MList2() {
                           color="text.primary"
                           fontSize={12}
                         >
-                        {" — I'll be in your neighborhood doing errands this…"}
+                          {`Message ${item}`}
                         </Typography>
                       </React.Fragment>
                     }
                   />
                   <ListItemIcon>
                     <DeleteIcon edge="start" />
-                    <StarBorderIcon edge="end" style={{marginLeft: 5}} />
+                    <StarBorderIcon edge="end" style={{ marginLeft: 5 }} />
                   </ListItemIcon>
                 </ListItem>
               ))}

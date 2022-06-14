@@ -20,10 +20,10 @@ export default function MList1() {
   return (
     <React.Fragment>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
+        <AppBar position="static" color="default">
+          <Toolbar disableGutters sx={{paddingLeft:1}}>
             <IconButton
-              size="large"
+              size="small"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -39,7 +39,7 @@ export default function MList1() {
               Your recent Orders
             </Typography>
             <IconButton
-              size="large"
+              size="small"
               edge="start"
               color="inherit"
               aria-label="menu"
@@ -68,11 +68,10 @@ export default function MList1() {
               {[0, 1, 2].map((item) => (
                 <ListItem key={`item-${item}-${sectionId}`}>
                   <ListItemAvatar>
-                    <Avatar alt="Remy Sharp" src="." />
+                    <Avatar alt="Remy Sharp" src="." sizes="small"/>
                   </ListItemAvatar>
                   <ListItemText
                   style={{marginRight: "10px"}}
-                    primary="Brunch ?"
                     secondary={
                       <React.Fragment>
                         <Typography
@@ -82,7 +81,7 @@ export default function MList1() {
                           color="text.primary"
                           fontSize={12}
                         >
-                        {" — I'll be in your neighborhood doing errands this…"}
+                        {`Order ${item}`}
                         </Typography>
                       </React.Fragment>
                     }

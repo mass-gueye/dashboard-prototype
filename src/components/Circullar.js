@@ -18,9 +18,9 @@ function CircularProgressWithLabel(props) {
       <CircularProgress
         variant="determinate"
         {...props}
-        size={80}
+        size={60}
         color={props.clr}
-        thickness={10}
+        thickness={6}
       />
       <Box
         sx={{
@@ -49,7 +49,6 @@ CircularProgressWithLabel.propTypes = {
    * @default 0
    */
   value: PropTypes.number.isRequired,
-  default: 45,
 };
 
 export default function CircularStatic() {
@@ -88,7 +87,7 @@ export default function CircularStatic() {
       </Box>
       <Divider />
       <Grid container style={{ marginTop: 10 }} space={2}>
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={3} md={4} lg={3}>
           <Typography variant="p" component="h5" color="text.secondary">
             Have 100,000 Users
           </Typography>
@@ -97,10 +96,10 @@ export default function CircularStatic() {
           </Typography>
         </Grid>
         {/*  */}
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={3} md={4} lg={3}>
           <CircularProgressWithLabel value={76} clr="warning" />
         </Grid>
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={3} md={4} lg={3}>
           <Typography variant="p" component="h5" color="text.secondary">
             Lower bounce rate to 10%
           </Typography>
@@ -109,17 +108,21 @@ export default function CircularStatic() {
           </Typography>
         </Grid>
         {/*  */}
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={3} md={4} lg={3}>
           <CircularProgressWithLabel value={45} />
         </Grid>
       </Grid>
       <Divider />
-      <Grid container style={{ marginTop: 30 }}>
+      <Grid container sx={{ marginTop: 2 }}>
         <Grid item xs={12} md={4} lg={6}>
           <Typography variant="p" component="h5" color="text.secondary">
             Todoay's Goal
           </Typography>
-          <LinearProgress value={76} color="primary" style={{marginRight:10}} />
+          <LinearProgress
+            value={76}
+            color="primary"
+            sx={{ height: 10, borderRadius: 5,width:"90%" }}
+          />
         </Grid>
         {/*  */}
 
@@ -127,9 +130,35 @@ export default function CircularStatic() {
           <Typography variant="p" component="h5" color="text.secondary">
             Yesterday's Goal
           </Typography>
-          <LinearProgress value={76} color="warning" />
+          <LinearProgress
+            value={76}
+            color="warning"
+            sx={{ height: 10, borderRadius: 5, width:"80%" }}
+          />
         </Grid>
         {/*  */}
+        <Grid item xs={12} md={4} lg={6}>
+          <Typography variant="p" component="h5" color="text.secondary">
+            Todoay's Goal
+          </Typography>
+          <LinearProgress
+            value={76}
+            color="primary"
+            sx={{ height: 10, borderRadius: 5, width:"80%" }}
+          />
+        </Grid>
+        {/*  */}
+
+        <Grid item xs={12} md={4} lg={6}>
+          <Typography variant="p" component="h5" color="text.secondary">
+            Yesterday's Goal
+          </Typography>
+          <LinearProgress
+            value={76}
+            color="warning"
+            sx={{ height: 10, borderRadius: 5 }}
+          />
+        </Grid>
       </Grid>
     </React.Fragment>
   );
