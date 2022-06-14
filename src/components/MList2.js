@@ -69,7 +69,11 @@ export default function MList2() {
               {[0, 1, 2].map((item) => (
                 <ListItem key={`item-${item}-${sectionId}`}>
                   <ListItemAvatar>
-                    <Avatar alt="Remy Sharp" src="." />
+                    <Avatar
+                      alt="Remy Sharp"
+                      src="."
+                      sx={{ width: 24, height: 24 }}
+                    />
                   </ListItemAvatar>
                   <ListItemText
                     style={{ marginRight: "10px" }}

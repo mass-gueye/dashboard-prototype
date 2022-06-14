@@ -13,15 +13,14 @@ import Box from "@mui/material/Box";
 import { AiOutlineReload } from "react-icons/ai";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 export default function MList1() {
-  
   return (
     <React.Fragment>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" color="default">
-          <Toolbar disableGutters sx={{paddingLeft:1}}>
+          <Toolbar disableGutters sx={{ paddingLeft: 1 }}>
             <IconButton
               size="small"
               edge="start"
@@ -68,10 +67,14 @@ export default function MList1() {
               {[0, 1, 2].map((item) => (
                 <ListItem key={`item-${item}-${sectionId}`}>
                   <ListItemAvatar>
-                    <Avatar alt="Remy Sharp" src="." sizes="small"/>
+                    <Avatar
+                      alt="Remy Sharp"
+                      src="."
+                      sx={{ width: 24, height: 24 }}
+                    />
                   </ListItemAvatar>
                   <ListItemText
-                  style={{marginRight: "10px"}}
+                    style={{ marginRight: "10px" }}
                     secondary={
                       <React.Fragment>
                         <Typography
@@ -81,14 +84,14 @@ export default function MList1() {
                           color="text.primary"
                           fontSize={12}
                         >
-                        {`Order ${item}`}
+                          {`Order ${item}`}
                         </Typography>
                       </React.Fragment>
                     }
                   />
                   <ListItemIcon>
                     <DeleteIcon edge="start" />
-                    <VisibilityIcon edge="end" style={{marginLeft: 5}} />
+                    <VisibilityIcon edge="end" style={{ marginLeft: 5 }} />
                   </ListItemIcon>
                 </ListItem>
               ))}
